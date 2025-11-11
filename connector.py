@@ -31,7 +31,7 @@ def add_student():
         (student_id, name, age, branch)
     )
     db.commit()
-    print("✅ Student added successfully!")
+    print("Student added successfully!")
 
 
 def view_students():
@@ -52,14 +52,14 @@ def update_student():
         (name, age, branch, student_id)
     )
     db.commit()
-    print("✅ Student updated successfully!")
+    print("Student updated successfully!")
 
 
 def delete_student():
     student_id = int(input("Enter ID to delete: "))
     cursor.execute("DELETE FROM students WHERE student_id=%s", (student_id,))
     db.commit()
-    print("✅ Student deleted successfully!")
+    print("Student deleted successfully!")
 
 # ---------- MAIN LOOP ----------
 if __name__ == "__main__":
@@ -75,7 +75,7 @@ if __name__ == "__main__":
         elif choice == '4':
             delete_student()
         elif choice == '5':
-            print("Goodbye 👋")
+            print("Goodbye!")
             break
         else:
             print("Invalid choice! Try again.")
